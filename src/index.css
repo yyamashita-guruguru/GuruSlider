@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* 入力欄のプレースホルダー（ヒント文字）を確実に読みやすくする。
+   基本＝濃いグレー（白・明るい背景で目立つ）。特別なクラスに依存せず必ず適用される。
+   暗い背景のスライド（外枠に .ph-dark が付く）だけ、白系に上書きする。 */
+input::placeholder,
+textarea::placeholder {
+  color: #334155 !important; /* slate-700（濃いグレー） */
+  opacity: 1 !important;      /* 既定の薄字化を無効化 */
+}
+
+.ph-dark input::placeholder,
+.ph-dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.92) !important; /* 暗い背景では白系 */
+}
